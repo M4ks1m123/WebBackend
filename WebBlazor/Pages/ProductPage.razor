@@ -1,0 +1,75 @@
+﻿@page "/Product/{ProductId}"
+@using WebBlazor.Components.OrdersList
+@using WebBlazor.Data.Models
+@using WebBlazor.Services
+@using WebBlazor.Data
+
+@if (CurrentProduct != null)
+{
+    <div class="product">
+        <div class="container" style="max-width: 800px; align-content: center">
+            <div class="row justify-content-center">
+                <a class="col-sm" href=@CurrentProduct.ImgUrl target="_blank"><img src=@CurrentProduct.ImgUrl width="400" height="400" /></a>
+                <ul class="col-lg">
+                    <div>
+                    <li class="row">
+                        <h1>@CurrentProduct.Name</h1>
+                    </li>
+                    <li class="row">
+                        <h3 class="mt-5">Описание товара</h3>
+                        <p class="short-desc">@CurrentProduct.Desc</p>
+                    </li>
+                    <li class="row">
+                        <h3 class="mt-3">Цена</h3>
+                        <p class="detailed-desc">@CurrentProduct.Price ₽</p>
+                    </li>
+                    <li class="row">
+                        <button type="button" @onclick="()=>CreateOrder(CurrentProduct)" class="btn btn-outline-dark mt-3">Купить</button>
+                    </li>
+            </div>
+            </ul>
+        </div>
+    </div>
+        </div>
+}
+
+
+@code {
+    [Parameter]
+    public string ProductId { get; set; }
+    public int UserId { get; set; }
+    public Data.Models.Product? CurrentProduct { get; set; }
+    public Data.Models.User? CurrentUser { get; set; }
+    [Inject]
+    private IProductProvider productsProvider { get; set; }
+    [Inject]
+    private IOrderProvider ordersProvider { get; set; }
+    [Inject]
+    private IUserProvider usersProvider { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        UserId = 1;
+        CurrentProduct = await productsProvider.GetOne(Int32.Parse(ProductId));
+        CurrentUser = await usersProvider.GetOne(UserId);
+        Console.WriteLine(CurrentProduct);
+        base.OnInitialized();
+    }
+
+    async Task CreateOrder(Product product)
+    {
+        var order1 = new OrderDTO();
+        order1.PaymentId = product.Price;
+        order1.UserId = CurrentUser.Id;
+        order1.ProductId = Int32.Parse(ProductId);
+        await ordersProvider.Add(order1);
+    }
+    async Task EditOrder()
+    {
+        var order1 = new Order();
+        await ordersProvider.Edit(order1);
+    }
+    async Task RemoveOrder(int OrderId)
+    {
+        await ordersProvider.Remove(OrderId);
+    }
+}

@@ -1,0 +1,30 @@
+﻿@using WebBlazor.Components.OrdersList
+@using WebBlazor.Services
+
+@page "/account/{UserId}"
+
+<div class="container" style="max-width: 800px; align-content: center">
+    <h1>Личный кабинет</h1>
+    @if (CurrentUser != null)
+    {
+        <p class="mt-2">Добро пожаловать, @CurrentUser.Email!</p>
+        <p>Ваш пароль: @CurrentUser.Password</p>
+        <a href="/account-settings" type="button" class="btn btn-primary" style="width: 100%">Настройки пользователя</a>
+
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string UserId { get; set; }
+    public List<Data.Models.User> Users { get; set; }
+    public Data.Models.User? CurrentUser { get; set; }
+    [Inject]
+    private IUserProvider usersProvider { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        CurrentUser = await usersProvider.GetOne(Int32.Parse(UserId));
+        Users = await usersProvider.GetAll();
+        base.OnInitialized();
+    }
+}

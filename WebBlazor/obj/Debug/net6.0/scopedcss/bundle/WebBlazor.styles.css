@@ -1,0 +1,125 @@
+/* /Pages/Account.razor.rz.scp.css */
+p[b-z2qab0c7cx] {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container[b-z2qab0c7cx]{
+    margin-top: 7rem;
+}
+/* /Pages/AccountSettings.razor.rz.scp.css */
+p[b-81my5i9kae] {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container[b-81my5i9kae] {
+    margin-top: 7rem;
+}
+/* /Pages/Index.razor.rz.scp.css */
+.front-page[b-71odq3ohbs] {
+    text-align: center;
+    background-image: linear-gradient(rgba(19, 29, 21, 0.7), rgba(68, 71, 70, 0.7)), url(Assets/background-img.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-right: 0rem;
+    margin-left:0rem;
+    font-style: 'Noto Sans';
+}
+
+.hero[b-71odq3ohbs] {
+    padding: 300px 0px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+/* /Pages/ProductCategories/BedsCategory.razor.rz.scp.css */
+li[b-d9kyd27ce9] {
+    list-style-type: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/* /Pages/ProductCategories/ChairsCategory.razor.rz.scp.css */
+
+li[b-cs8ayj1bii]{
+    list-style-type: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/* /Pages/ProductCategories/TablesCategory.razor.rz.scp.css */
+li[b-zvq5osezq7] {
+    list-style-type: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/* /Pages/ProductPage.razor.rz.scp.css */
+body[b-a8bdmissio] {
+}
+
+.product[b-a8bdmissio] {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 7em;
+}
+/* /Pages/ShoppingCart.razor.rz.scp.css */
+.container[b-bkocg8e6ys] {
+    margin-top: 7rem;
+}
+/* /Shared/Footer.razor.rz.scp.css */
+p[b-0tl7zrev3m] {
+    color:black;
+}
+/* /Shared/Header.razor.rz.scp.css */
+*[b-dea8y3mgqr] {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.navbar[b-dea8y3mgqr] {
+    flex: 1;
+    background-color: #d2e592;
+    padding: 0%;
+}
+
+    .navbar ul[b-dea8y3mgqr] {
+        text-align: center;
+        margin: 0%;
+        padding: 0%;
+    }
+
+.logo[b-dea8y3mgqr] {
+    text-align: center;
+}
+
+.navbar ul li a[b-dea8y3mgqr] {
+    font-size: 19px;
+    color: #1f2820;
+    font-style: 'Noto Sans';
+    text-decoration: none;
+    padding: 0%;
+}
+
+    .navbar ul li a:hover[b-dea8y3mgqr] {
+        color: #618064;
+        padding: 0%;
+    }
+
+.links ul[b-dea8y3mgqr] {
+    flex: 1;
+}
+
+    .links ul li[b-dea8y3mgqr] {
+        display: inline-block;
+        padding: 8px 12px;
+    }
+
+header[b-dea8y3mgqr] {
+    background-color: rgb(255, 255, 255);
+}
+
+.categories[b-dea8y3mgqr] {
+    font-size: 19px;
+    color: #1f2820;
+    font-style: 'Noto Sans';
+    text-decoration: none;
+    padding: 0%;
+}

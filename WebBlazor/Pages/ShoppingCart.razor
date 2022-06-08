@@ -1,0 +1,68 @@
+﻿@using WebBlazor.Components.OrdersList
+@using WebBlazor.Data.Models
+@using WebBlazor.Services
+@inject NavigationManager _navigationManager
+@page "/shopping-cart"
+
+
+<div class="container" style="max-width: 800px; align-content: center">
+
+    <h1 class="mt-3"> Список заказов:</h1>
+
+    <table class="table mt-5">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Стоимость</th>
+                <th>Пользователь</th>
+                <th>Товар</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (orders != null)
+            {
+                @foreach (var order in orders)
+                {
+                    <tr>
+                        <td>@order.Id</td>
+                        <td>@order.PaymentId ₽</td>
+                        <td>@order.User?.Email</td>
+                        <td @onclick="()=>toItem(order.Product?.Id)">@order.Product?.Name</td>
+                        <td><button type="button" @onclick="()=>RemoveOrder(order.Id)" class="btn btn-outline-danger" style="width: 100%">Удалить</button></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+
+@code {
+    [Parameter]
+    public string UserId { get; set; }
+    public List<Data.Models.User> Users { get; set; }
+    [Parameter]
+    public Data.Models.User? CurrentUser { get; set; }
+    [Inject]
+    private IUserProvider usersProvider { get; set; }
+    [Inject]
+    private IOrderProvider ordersProvider { get; set; }
+    private List<Order>? orders;
+
+    protected override async Task OnInitializedAsync()
+    {
+        UserId = "1";
+        orders = await ordersProvider.GetAllByUser(1);
+        CurrentUser = await usersProvider.GetOne(Int32.Parse(UserId));
+        Users = await usersProvider.GetAll();
+        base.OnInitialized();
+    }
+    public void toItem(int? ProductId)
+    {
+        _navigationManager.NavigateTo($"/Product/{ProductId}");
+    }
+    async Task RemoveOrder(int OrderId)
+    {
+        await ordersProvider.Remove(OrderId);
+    }
+}

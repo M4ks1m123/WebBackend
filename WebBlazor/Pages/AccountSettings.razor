@@ -1,0 +1,43 @@
+﻿@using WebBlazor.Data.Models
+@using WebBlazor.Services
+@page "/account-settings"
+
+
+<div class="container" style="max-width: 800px; align-content: center">
+    <h1>Изменение данных аккаунта</h1>
+    <EditForm Model="user" OnSubmit="EditUser">
+        <div class="form-group">
+            <label for="exampleInputEmail1">Почтовый адрес</label>
+            <InputText class="form-control" @bind-Value="user.Email" aria-describedby="emailHelp" placeholder="Enter email"></InputText>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Пароль</label>
+            <InputText type="password" class="form-control" @bind-Value="user.Password" placeholder="Password"></InputText>
+        </div>
+        <button class="btn btn-primary">Submit</button>
+    </EditForm>
+</div>
+
+@code {
+    [Parameter]
+    public string UserId { get; set; }
+    public List<Data.Models.User> Users { get; set; }
+    UserDTO user = new UserDTO();
+
+    public Data.Models.User? CurrentUser { get; set; }
+    [Inject]
+    private IUserProvider usersProvider { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        UserId = "1";
+        CurrentUser = await usersProvider.GetOne(Int32.Parse(UserId));
+        Users = await usersProvider.GetAll();
+        base.OnInitialized();
+    }
+    async Task EditUser()
+    {
+        //var user = new UserDTO();
+        await usersProvider.Edit(user);
+    }
+
+}

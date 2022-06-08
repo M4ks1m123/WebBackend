@@ -1,0 +1,51 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = Blazor
+build_property.RootNamespace = Blazor
+build_property.ProjectDir = D:\visual_studio_projects\WebBackend5\WebBlazor\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\visual_studio_projects\WebBackend5\WebBlazor
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/visual_studio_projects/WebBackend5/WebBlazor/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/visual_studio_projects/WebBackend5/WebBlazor/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/visual_studio_projects/WebBackend5/WebBlazor/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/visual_studio_projects/WebBackend5/WebBlazor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/visual_studio_projects/WebBackend5/WebBlazor/Components/AuthorsList/AuthorsList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBdXRob3JzTGlzdFxBdXRob3JzTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-onik1ihlwe
+
+[D:/visual_studio_projects/WebBackend5/WebBlazor/Pages/Author.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aG9yLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-89w75hhame
+
+[D:/visual_studio_projects/WebBackend5/WebBlazor/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-r0yqwuvdyg
+
+[D:/visual_studio_projects/WebBackend5/WebBlazor/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6hj6azdo60

@@ -1,0 +1,19 @@
+﻿@using WebBlazor.Components
+@using WebBlazor.Components.ProductList
+@using WebBlazor.Services
+
+@page "/"
+@page "/{categoryUrl}"
+@inject IProductProvider ProductProvider
+
+<div class="front-page">
+    <div class="hero ">
+        <h1>Furniture</h1>
+        <p>Добро пожаловать!</p>
+    </div>
+</div>
+
+@code{
+    [Parameter]
+    public string? CategoryUrl { get; set; } = null;
+}

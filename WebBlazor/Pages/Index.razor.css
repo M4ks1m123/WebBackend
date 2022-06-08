@@ -1,0 +1,16 @@
+﻿.front-page {
+    text-align: center;
+    background-image: linear-gradient(rgba(19, 29, 21, 0.7), rgba(68, 71, 70, 0.7)), url(Assets/background-img.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-right: 0rem;
+    margin-left:0rem;
+    font-style: 'Noto Sans';
+}
+
+.hero {
+    padding: 300px 0px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}

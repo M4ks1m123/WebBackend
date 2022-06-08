@@ -1,0 +1,45 @@
+﻿
+@using WebBlazor.Services
+@using WebBlazor.Data.Models
+@using WebBlazor.Services
+@inject NavigationManager _navigationManager
+
+<h1>Список авторов</h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Стоимость</th>
+        <th>Пользователь</th>
+        <th>Товар</th>
+    </tr>
+    </thead>
+    <tbody>
+    @if (orders != null)
+    {
+       @foreach (var order in orders)
+        {
+            <tr  @onclick="()=>toItem(order)">
+                <td>@order.Id</td>
+                <td>@order.PaymentId</td>
+                <td>@order.User?.Id</td>
+                <td>@order.Product?.Id</td>
+            </tr>
+        }
+    }
+    </tbody>
+</table>
+
+@code{
+    private List<Order>? orders;
+    [Inject]
+    private IOrderProvider ordersProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        orders = await ordersProvider.GetAll();
+    }
+    public void toItem(Order order)
+    {
+        _navigationManager.NavigateTo($"/Order/{order.Id}");
+    }
+}

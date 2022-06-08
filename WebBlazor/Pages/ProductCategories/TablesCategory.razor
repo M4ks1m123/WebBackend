@@ -1,0 +1,39 @@
+﻿@using WebBlazor.Components.OrdersList
+@using WebBlazor.Components.UserList
+@using WebBlazor.Data.Models
+@using WebBlazor.Services
+@using WebBlazor.Data
+@inject NavigationManager _navigationManager
+@page "/tables-category"
+
+<div class="categories container mt-5">
+    <h1>Столы</h1>
+    <ul class="row mt-4">
+        @if (products != null)
+        {
+            @foreach (var product in products)
+            {
+                <li class="col-4" @onclick="()=>toItem(product)">
+                    <img src="@product.ImgUrl" width="100%" height="auto">
+                    <h3>@product.Name</h3>
+                    <p>@product.Price ₽</p>
+                </li>
+            }
+        }
+
+    </ul>
+
+</div>
+@code {
+    private List<Product>? products;
+    [Inject]
+    private IProductProvider productsProvider { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        products = await productsProvider.GetAll("tables");
+    }
+    public void toItem(Product product)
+    {
+        _navigationManager.NavigateTo($"/Product/{product.Id}");
+    }
+}

@@ -1,0 +1,83 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = WebBlazor
+build_property.RootNamespace = WebBlazor
+build_property.ProjectDir = D:\haha\WebBackend6\WebBlazor\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\haha\WebBackend6\WebBlazor
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/haha/WebBackend6/WebBlazor/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/haha/WebBackend6/WebBlazor/Components/OrdersList/OrdersList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xPcmRlcnNMaXN0XE9yZGVyc0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/haha/WebBackend6/WebBlazor/Components/ProductList/ProductList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQcm9kdWN0TGlzdFxQcm9kdWN0TGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/haha/WebBackend6/WebBlazor/Components/UserList/UserList.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2VyTGlzdFxVc2VyTGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/haha/WebBackend6/WebBlazor/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/haha/WebBackend6/WebBlazor/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/haha/WebBackend6/WebBlazor/Pages/Account.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-z2qab0c7cx
+
+[D:/haha/WebBackend6/WebBlazor/Pages/AccountSettings.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFNldHRpbmdzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-81my5i9kae
+
+[D:/haha/WebBackend6/WebBlazor/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-71odq3ohbs
+
+[D:/haha/WebBackend6/WebBlazor/Pages/ProductCategories/BedsCategory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENhdGVnb3JpZXNcQmVkc0NhdGVnb3J5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-d9kyd27ce9
+
+[D:/haha/WebBackend6/WebBlazor/Pages/ProductCategories/ChairsCategory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENhdGVnb3JpZXNcQ2hhaXJzQ2F0ZWdvcnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cs8ayj1bii
+
+[D:/haha/WebBackend6/WebBlazor/Pages/ProductCategories/TablesCategory.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdENhdGVnb3JpZXNcVGFibGVzQ2F0ZWdvcnkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-zvq5osezq7
+
+[D:/haha/WebBackend6/WebBlazor/Pages/ProductPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdFBhZ2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-a8bdmissio
+
+[D:/haha/WebBackend6/WebBlazor/Pages/ShoppingCart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdDYXJ0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-bkocg8e6ys
+
+[D:/haha/WebBackend6/WebBlazor/Shared/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-0tl7zrev3m
+
+[D:/haha/WebBackend6/WebBlazor/Shared/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-dea8y3mgqr
